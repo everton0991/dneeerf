@@ -1,0 +1,28 @@
+h1 {
+    margin-left: 5px;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+button {
+    font-size: 15px;
+}
+.profile-menu {
+    height: 100%;
+    margin: 0 5px 0 0;
+}
+.avatar {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;    
+}
+strong {
+    color: #ea5348;
+}

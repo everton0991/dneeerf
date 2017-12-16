@@ -1,0 +1,20 @@
+.content {
+    padding: 50px 10px;
+}
+.table-container {
+    max-width: 850px;
+    margin: 0px auto;
+}
+.add {
+    top: auto;
+    right: 45px;
+    bottom: 30px;
+    left: auto;
+    position: fixed;
+}
+mat-row .actions a mat-icon {
+    color: #ccc;
+}
+mat-row:hover .actions a mat-icon {
+    color: #635f5f;
+}

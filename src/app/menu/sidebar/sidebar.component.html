@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor='let menu of mainMenu' routerLinkActive="active"> 
+    <a routerLink="{{ menu.link }}">
+      <mat-icon>{{ menu.icon }}</mat-icon>
+      {{ menu.text }}
+    </a>
+  </li>
+</ul>
