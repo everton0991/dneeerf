@@ -1,3 +1,32 @@
-<p>
-  dashboard works!
-</p>
+<mat-tab-group color="warn">
+  <mat-tab label="Ranking">
+    <div class="container-tab cards">
+      <mat-card *ngFor='let user of users' class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image">
+            <img src="{{ user.picture }}" alt="Photo of a {{ user.name }}">
+          </div>
+          <mat-card-title>{{ user.name }}</mat-card-title>
+          <mat-card-subtitle>{{ user.race }}</mat-card-subtitle>
+        </mat-card-header>
+        <div mat-card-image class="content-image">
+          <img src="{{ user.cardPicture }}" alt="Photo of {{ user.name }}">
+        </div>
+        <mat-card-actions>
+          <button mat-icon-button>
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>share</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </mat-tab>
+  <mat-tab label="All Users">
+    <div class="container-tab">
+      Contacts soon..
+    </div>
+  </mat-tab>
+</mat-tab-group>

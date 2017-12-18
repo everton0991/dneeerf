@@ -14,6 +14,10 @@ export class ToolbarComponent implements OnInit {
 
   title = 'Teste';
   appname = 'My App';
+  user = {
+    'name': 'Son Goku',
+    'picture': 'http://sm.ign.com/ign_br/screenshot/default/goku_an6e.jpg',
+  };
   messages = [
     { notification: 'New contact via Facebook', date: '30 min ago' },
     { notification: 'New contact via Google', date: '1 hours ago' },
