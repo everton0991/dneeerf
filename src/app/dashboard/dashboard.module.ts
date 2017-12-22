@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
-import { MatIconModule, MatButtonModule } from '@angular/material';
+import { SharedModule } from '@app/shared/shared.module';
 
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from '@app/dashboard/dashboard.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     MatTabsModule,
     MatCardModule,
-    MatIconModule,
-    MatButtonModule,
   ],
   exports: [
     DashboardComponent

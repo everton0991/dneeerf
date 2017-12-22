@@ -9,3 +9,6 @@
     opacity: 1;
     z-index: 500000;
 }
+.loader-overlay mat-progress-bar {
+    height: 2px;
+}

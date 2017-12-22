@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
-import { MatIconModule } from '@angular/material';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '@app/shared/shared.module';
 
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from '@app/menu/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    MatIconModule,
+    SharedModule,
     RouterModule
   ],
   exports: [

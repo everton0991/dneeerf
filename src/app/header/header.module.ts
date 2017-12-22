@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule } from '@angular/material';
-import { CommonModule } from '@angular/common';
+import { MatToolbarModule, MatMenuModule } from '@angular/material';
+import { SharedModule } from '@app/shared/shared.module';
 
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarComponent } from '@app/header/toolbar/toolbar.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     MatToolbarModule,
-    MatIconModule,
     MatMenuModule,
-    MatButtonModule   
   ],
   exports: [
     ToolbarComponent

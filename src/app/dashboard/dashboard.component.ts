@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { LoaderService } from '../loader/loader.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  constructor(private loaderService: LoaderService) { }
+
+  ngOnInit() {
+    this.loaderService.showLoader();
+  }
+
+  ngAfterContentInit() {
+    this.loaderService.hideLoader();
+  }
 
   users = [
     {
@@ -39,9 +50,4 @@ export class DashboardComponent implements OnInit {
       'cardPicture': 'https://myanimelist.cdn-dena.com/images/characters/16/316662.jpg',
     },
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 }
