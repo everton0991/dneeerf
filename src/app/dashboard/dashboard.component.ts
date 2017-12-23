@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LoaderService } from '../loader/loader.service';
+import { LoaderService } from '@app/shared/loader/loader.service';
 
 @Component({
   selector: 'app-dashboard',

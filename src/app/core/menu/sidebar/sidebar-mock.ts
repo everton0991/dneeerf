@@ -1,5 +1,5 @@
 
-import { Menu } from './sidebar';
+import { Menu } from '@app/core/menu/sidebar/sidebar';
 
 export const LINKS: Menu[] = [
     { link: '/dashboard', text: 'Dashboard', icon: 'dashboard', active: true },

@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
-import { ContentService } from '../content.service';
-import { LoaderService } from '../../loader/loader.service';
-import { List } from '../list/list';
+import { ContentService } from '@app/content/content.service';
+import { LoaderService } from '@app/shared/loader/loader.service';
+import { List } from '@app/content/list/list';
 
 @Component({
   selector: 'app-list',

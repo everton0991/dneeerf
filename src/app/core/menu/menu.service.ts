@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Menu } from './sidebar/sidebar';
-import { LINKS } from './sidebar/sidebar-mock';
+import { Menu } from '@app/core/menu/sidebar/sidebar';
+import { LINKS } from '@app/core/menu/sidebar/sidebar-mock';
 
 @Injectable()
 export class MenuService {

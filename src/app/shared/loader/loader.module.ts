@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
-import { LoaderComponent } from '@app/loader/loader.component';
+import { LoaderComponent } from '@app/shared/loader/loader.component';
 
 @NgModule({
   imports: [
