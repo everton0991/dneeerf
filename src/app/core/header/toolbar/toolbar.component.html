@@ -18,8 +18,8 @@
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #profile="matMenu" [overlapTrigger]="false">
-      <button mat-menu-item>Profile</button>
-      <button mat-menu-item>Logout</button>
+      <a mat-menu-item routerLink="/profile/{{ user.id }}">Profile</a>
+      <a mat-menu-item>Sair</a>
     </mat-menu>
 
     <button mat-icon-button [matMenuTriggerFor]="settings">

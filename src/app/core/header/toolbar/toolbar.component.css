@@ -1,9 +1,15 @@
+mat-toolbar {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
 mat-toolbar-row {
     padding-left: 0;
 }
 header {
     background: #282525;
-    padding: 10px 10px;
+    padding: 7px 10px;
     width: 230px;
     display: flex;
     text-align: center;
@@ -24,13 +30,6 @@ button {
 .profile-menu {
     height: 100%;
     margin: 0 5px 0 0;
-}
-.avatar {
-    min-height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    margin: 0 5px 0 0;
-    text-align: center;
 }
 strong {
     color: #ea5348;

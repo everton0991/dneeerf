@@ -12,7 +12,6 @@ const httpOptions = {
 
 @Injectable()
 export class ContentService {
-
   private contentUrl = 'api/itens'; /** url for content */
 
   constructor(private http: HttpClient) { }

@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 
-import { SidebarComponent } from '@app/core/menu/sidebar/sidebar.component';
+import { ProfileComponent } from '@app/profile/profile.component';
 
 @NgModule({
   imports: [
     SharedModule
   ],
   exports: [
-    SidebarComponent
+    ProfileComponent
   ],
   declarations: [
-    SidebarComponent
+    ProfileComponent
   ]
 })
-export class MenuModule { }
+export class ProfileModule {
+  constructor () { }
+}

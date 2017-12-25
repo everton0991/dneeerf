@@ -15,6 +15,7 @@ export class ToolbarComponent implements OnInit {
   title = 'Teste';
   appname = 'My App';
   user = {
+    'id': 1,
     'name': 'Son Goku',
     'picture': 'http://sm.ign.com/ign_br/screenshot/default/goku_an6e.jpg',
   };

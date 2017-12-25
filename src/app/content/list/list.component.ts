@@ -11,7 +11,6 @@ import { List } from '@app/content/list/list';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
   displayedColumns = ['position', 'name', 'weight', 'symbol','actions'];
   dataSource = new MatTableDataSource();
 
