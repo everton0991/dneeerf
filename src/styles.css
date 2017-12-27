@@ -9,7 +9,11 @@ body {
     font-family: 'Roboto';
     font-size: 15px;
     margin: 0;
-    color:#333030;
+    color:#706c6c !important;
+}
+h1, h2, h3, h4 {
+  color:#706c6c;
+  margin: 0;
 }
 mat-sidenav-container {
     padding-top: 64px; 

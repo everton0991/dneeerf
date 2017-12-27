@@ -1,16 +1,94 @@
 .container-profile {
-    overflow: hidden;
     height: 100%;
 }
 .container-profile .profile {
-   width: 100%;
+    width: 100%;
+    display: block;
 }
 header {
-   display: flex;
-   padding: 20px;
+    background: url('http://juliaebert.com/jekyll-polymer/images/material-bg-10.png') center center;   
+    display: flex;
+    padding: 20px;
+    color:#fff;
 }
-.avatar {
+header h2 {
+    color: #fff;
+    margin-top: 30px;
+}
+header .avatar {
     width: 100px;
     height: 100px;
-    margin: 0 auto;
+    margin-right: 20px;
+}
+section {
+    display: flex;
+    padding: 25px 10px;
+}
+section div {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.timeline {
+    min-width: 55%;
+    flex: 1 1 55%;
+    padding: 10px 0;
+}
+.timeline h3 {
+    color: #706c6c;
+    margin-bottom: 15px;
+}
+.timeline .card {
+    margin-bottom: 10px;
+}
+.timeline .card .card-header {
+    display: flex;
+    justify-content: space-between;
+}
+.timeline .card .card-actions button {
+    /* margin-right: 5px; */
+}
+.friends {
+    margin-left: 15px;
+    min-width: 35%;
+    height: 100%;
+    flex: 1 1 35%;    
+}
+.friends h3 {
+    color: #706c6c;
+    padding: 15px 10px;
+    border-top: 1px solid #e8e4e4;
+    border-bottom: 1px solid #e8e4e4;
+}
+.friends mat-icon {
+    color: #706c6c;
+}
+.friends .avatar {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+.friends .online, .friends .offline, 
+.friends .busy, .friends .idle {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right:5px;
+}
+.friends .online {
+    background: #69b265;
+}
+.friends .offline {
+    background: #7f7c7c;
+}
+.friends .busy {
+    background: #db4646;
+}
+.friends .idle {
+    background: #e88330;
+}
+span {
+    color: #7f7c7c;
+    font-size: 12px;
 }
