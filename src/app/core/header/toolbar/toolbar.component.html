@@ -1,11 +1,13 @@
-<mat-toolbar color="warn" class="mat-elevation-z2">
+<mat-toolbar color="default" class="mat-elevation-z2">
   <mat-toolbar-row>
 
     <header>
-      <img 
-      src="http://www.dragonballportugal.com/wp-content/uploads/2016/09/dragon-ball-super-logo-1.png" 
-      height="50" 
-      alt="Angular Logo" />
+      <a routerLink="/">
+        <img 
+        src="http://www.dragonballportugal.com/wp-content/uploads/2016/09/dragon-ball-super-logo-1.png" 
+        height="50" 
+        alt="Db Logo" />
+      </a>
       <button type="button" mat-icon-button (click)="navOpen()">
         <mat-icon>menu</mat-icon>
       </button>
@@ -21,8 +23,8 @@
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #profile="matMenu" [overlapTrigger]="false">
-      <a mat-menu-item routerLink="/profile/{{ user.id }}">Profile</a>
-      <a mat-menu-item>Sair</a>
+      <a mat-menu-item>Profile</a>
+      <a mat-menu-item (click)="logout()">Sair</a>
     </mat-menu>
 
     <button mat-icon-button [matMenuTriggerFor]="settings">

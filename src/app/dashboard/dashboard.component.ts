@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 import { LoaderService } from '@app/shared/loader/loader.service';
-import { ProfileService } from '@app/profile/profile.service';
-import { Profile } from '@app/profile/profile';
+import { UsersService } from '@app/shared/users.service';
+import { User } from '@app/shared/user';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,11 +10,11 @@ import { Profile } from '@app/profile/profile';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  @Input() users: Profile[];
+  @Input() users: User[];
 
   constructor(
     private loaderService: LoaderService,
-    private profileService: ProfileService
+    private usersService: UsersService
   ) { }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
 
   /** Return users from service */
   getUsers(): void {
-    this.profileService.getUsers()
+    this.usersService.getUsers()
       .subscribe((users) => {
         this.users = users;
         this.loaderService.hideLoader();

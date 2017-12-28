@@ -1,28 +1,6 @@
-.container-profile {
-    height: 100%;
-}
-.container-profile .profile {
-    width: 100%;
-    display: block;
-}
-header {
-    background: url('http://juliaebert.com/jekyll-polymer/images/material-bg-10.png') center center;   
-    display: flex;
-    padding: 20px;
-    color:#fff;
-}
-header h2 {
-    color: #fff;
-    margin-top: 30px;
-}
-header .avatar {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-}
 section {
     display: flex;
-    padding: 25px 10px;
+    padding: 10px;
 }
 section div {
     flex-wrap: wrap;
@@ -32,7 +10,13 @@ section div {
 .timeline {
     min-width: 55%;
     flex: 1 1 55%;
-    padding: 10px 0;
+    padding:0 0 10px 0;
+}
+.timeline form > * {
+    width: 100%;
+}
+.timeline form mat-form-field.mat-form-field {
+    margin-bottom: 20px;
 }
 .timeline h3 {
     color: #706c6c;
@@ -88,7 +72,7 @@ section div {
 .friends .idle {
     background: #e88330;
 }
-span {
+section span {
     color: #7f7c7c;
     font-size: 12px;
 }

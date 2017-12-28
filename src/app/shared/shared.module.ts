@@ -3,7 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule, MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { 
+  MatSidenavModule, 
+  MatIconModule, 
+  MatButtonModule, 
+  MatCardModule,
+  MatInputModule 
+} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';
 
 import { LoaderModule } from '@app/shared/loader/loader.module';
@@ -19,7 +26,9 @@ import { LoaderModule } from '@app/shared/loader/loader.module';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    RouterModule 
+    MatFormFieldModule,
+    MatInputModule,
+    RouterModule
   ],
   providers: []
 })

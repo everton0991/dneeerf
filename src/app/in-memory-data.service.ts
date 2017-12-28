@@ -65,6 +65,14 @@ export class InMemoryDataService implements InMemoryDbService {
         picture: 'https://pm1.narvii.com/6147/f14acb6149ed3a72ff16d2b8260ad24b107d893c_hq.jpg',
         cardPicture: 'https://myanimelist.cdn-dena.com/images/characters/16/316662.jpg',
       },
+      {
+        id: 6,        
+        name: 'Bulma',
+        race: 'Terráqueo',
+        status: 'offline',
+        picture: 'https://upload.wikimedia.org/wikipedia/en/7/71/Bulma_Lithograph.PNG',
+        cardPicture: 'https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/7/7c/IMG_20170410_080542.jpg/revision/latest?cb=20170410050640',
+      },
     ];
 
     return {itens, users};

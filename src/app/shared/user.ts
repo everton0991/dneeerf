@@ -1,5 +1,7 @@
-export class Profile {
+export class User {
     id: number;
+    username: string;
+    password: string;
     name: string;
     race: string;
     status: string;

@@ -9,10 +9,12 @@ import { SharedModule } from '@app/shared/shared.module';
 import { AppRoutingModule } from '@app/app-routing.module';
 
 import { AppComponent } from '@app/app.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent  ],
+    AppComponent,
+    LoginComponent  ],
   imports: [
     HttpModule,
     HttpClientModule,

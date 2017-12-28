@@ -1,0 +1,19 @@
+.container-login {
+    display: flex;
+    background: #514d4d;
+    height: 100%;
+}
+.container-login .form {
+    background: #fff;
+    width:300px;
+    padding: 40px 20px;
+    margin:auto;
+}
+.container-login .form img {
+    margin: 0 auto;
+    width: 164px;
+    display: block;
+}
+.container-login .form mat-form-field.mat-form-field {
+    width: 100%;
+}

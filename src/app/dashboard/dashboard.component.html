@@ -1,5 +1,12 @@
-<mat-tab-group color="warn">
-  <mat-tab label="Ranking">
+<app-profile></app-profile>
+
+<mat-tab-group color="primary">
+  <mat-tab label="Timeline">
+    <div class="container-tab">
+      <app-timeline></app-timeline>
+    </div>
+  </mat-tab>
+  <mat-tab label="All People">
     <div class="container-tab cards">
       <mat-card *ngFor='let user of users' class="card">
         <mat-card-header>

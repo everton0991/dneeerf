@@ -1,0 +1,26 @@
+<div class="container-login">
+  <div class="form mat-elevation-z5">
+    <img 
+    src="http://www.dragonballportugal.com/wp-content/uploads/2016/09/dragon-ball-super-logo-1.png" 
+    alt="Db Logo" />
+    <mat-form-field>
+      <input 
+      [(ngModel)]="user.username"
+      name="username"
+      matInput 
+      placeholder="Username" 
+      type="text"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input 
+      [(ngModel)]="user.password"
+      name="password" 
+      matInput 
+      placeholder="Password" 
+      type="password" />
+    </mat-form-field>
+    <button
+    (click)="login()" 
+    mat-raised-button color="warn">Login</button>
+  </div>
+</div>

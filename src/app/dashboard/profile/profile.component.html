@@ -1,0 +1,15 @@
+<div class="container-profile" *ngIf="profile">
+  <div class="profile">
+    <header class="mat-elevation-z2"> 
+      <div>
+        <img src="{{ profile.picture }}" 
+        alt="Photo of a {{ profile.name }}" 
+        class="avatar mat-elevation-z2">
+      </div>
+      <div>
+        <h2>{{ profile.name }}</h2>
+        <span>{{ profile.race }}</span>
+      </div>
+    </header>
+  </div>
+</div>

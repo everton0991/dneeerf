@@ -1,4 +1,6 @@
 import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '@app/login/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,7 +9,10 @@ import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) { }
   
   ngOnInit() {
   }
@@ -31,5 +36,10 @@ export class ToolbarComponent implements OnInit {
   
   navOpen() {
     this.navToggle.emit(true);
+  }
+
+  logout() {
+    this.authService.userLoggedEmitter.emit(false);
+    this.router.navigate(['/']);
   }
 }

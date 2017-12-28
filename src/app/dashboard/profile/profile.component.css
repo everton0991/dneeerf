@@ -1,0 +1,19 @@
+.container-profile .profile {
+    width: 100%;
+    display: block;
+}
+header {
+    background: url('http://juliaebert.com/jekyll-polymer/images/material-bg-10.png') center center;   
+    display: flex;
+    padding: 20px;
+    color:#fff;
+}
+header h2 {
+    color: #fff;
+    margin-top: 30px;
+}
+header .avatar {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}

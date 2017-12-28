@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { LoaderService } from '@app/shared/loader/loader.service';
-import { ProfileService } from '@app/profile/profile.service';
-import { Profile } from '@app/profile/profile';
+import { UsersService } from '@app/shared/users.service';
+import { User } from '@app/shared/user';
 
 @Component({
   selector: 'app-profile',
@@ -12,12 +12,12 @@ import { Profile } from '@app/profile/profile';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  @Input() profile: Profile;
-  @Input() users: Profile[];
+  @Input() profile: User;
+  @Input() users: User[];
 
   constructor(
     private loaderService: LoaderService,
-    private profileService: ProfileService,
+    private usersService: UsersService,
     private route: ActivatedRoute,
     private location: Location
   ) { }
@@ -30,7 +30,7 @@ export class ProfileComponent implements OnInit {
 
   /** Return users from service */
   getUsers(): void {
-    this.profileService.getUsers()
+    this.usersService.getUsers()
       .subscribe((users) => {
         this.users = users;
         this.loaderService.hideLoader();
@@ -39,8 +39,9 @@ export class ProfileComponent implements OnInit {
 
   /** Return user from service */
   getUser(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.profileService.getUser(id)
+    // const id = +this.route.snapshot.paramMap.get('id');
+    const id = 1;
+    this.usersService.getUser(id)
       .subscribe((profile) => {
         this.profile = profile;
         this.loaderService.hideLoader();
