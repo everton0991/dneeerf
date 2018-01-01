@@ -12,18 +12,34 @@ import { User } from '@app/shared/user';
 })
 export class TimelineComponent implements OnInit {
   @Input() users: User[];
+  posts: any[] = [];
+  likeNumber: number = Math.floor((Math.random() * 100) + 1);
+  favoriteNumber: number = Math.floor((Math.random() * 100) + 1);
+  shareNumber: number = Math.floor((Math.random() * 100) + 1);
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
-    this.getUsers();
   }
 
-  /** Return users from service */
-  getUsers(): void {
-    this.usersService.getUsers()
-      .subscribe((users) => {
-        this.users = users;
-      });
+  /** Add like to post */
+  addLike(): void {
+    this.likeNumber++;
+  }
+
+  /** Add post as favorite */
+  addFavorite(): void {
+    this.favoriteNumber++;
+  }
+
+  /** share post */
+  share(): void {
+    this.shareNumber++;
+  }
+
+  /** Adds a new post to timeline */
+  addNewPost(postMessage: HTMLInputElement): void {
+    this.posts.unshift(postMessage.value);
+    postMessage.value = '';
   }
 }

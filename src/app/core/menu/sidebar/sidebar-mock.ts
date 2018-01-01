@@ -1,4 +1,3 @@
-
 import { Menu } from '@app/core/menu/sidebar/sidebar';
 
 export const LINKS: Menu[] = [

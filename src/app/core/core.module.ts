@@ -8,8 +8,10 @@ import { AuthService } from '@app/login/auth.service';
 import { ContentService } from '@app/content/content.service';
 import { MenuService } from '@app/core/menu/menu.service';
 import { LoaderService } from '@app/shared/loader/loader.service';
+import { MessagesService } from '@app/shared/messages.service';
 import { ContactsComponent } from '@app/contacts/contacts.component';
 import { throwIfAlreadyLoaded } from '@app/core/module-import.guard';
+import { AuthGuard } from '@app/guards/auth-guard';
 
 @NgModule({
   exports: [
@@ -23,12 +25,14 @@ import { throwIfAlreadyLoaded } from '@app/core/module-import.guard';
   ],
   providers: [
     AuthService,
+    AuthGuard,
     ContentService,
     MenuService,
-    LoaderService
+    LoaderService,
+    MessagesService
   ]
 })
-export class CoreModule { 
+export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule ) {
     throwIfAlreadyLoaded(parentModule, 'CoreModule');
   }

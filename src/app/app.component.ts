@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@app/login/auth.service';
 
 @Component({
@@ -6,14 +6,14 @@ import { AuthService } from '@app/login/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  userLogged: boolean = false;
+  userLogged: Boolean = false;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
     this.authService.userLoggedEmitter
-      .subscribe(userLogged => this.userLogged = userLogged)
+      .subscribe(userLogged => this.userLogged = userLogged);
   }
 }

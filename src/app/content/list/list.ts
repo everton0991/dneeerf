@@ -3,4 +3,5 @@ export class List {
     position: number;
     weight: number;
     symbol: string;
-  }
+}
+

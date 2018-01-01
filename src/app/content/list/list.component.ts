@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
 import { ContentService } from '@app/content/content.service';
@@ -10,8 +10,8 @@ import { List } from '@app/content/list/list';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
-  displayedColumns = ['position', 'name', 'weight', 'symbol','actions'];
+export class ListComponent implements OnInit, AfterViewInit {
+  displayedColumns = ['position', 'name', 'weight', 'symbol', 'actions'];
   dataSource = new MatTableDataSource();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -20,10 +20,11 @@ export class ListComponent implements OnInit {
   constructor(
     private contentService: ContentService,
     private loaderService: LoaderService
-  ) { }
-  
-  ngOnInit() {
+  ) {
     this.loaderService.showLoader();
+  }
+
+  ngOnInit() {
     this.getList();
   }
 
@@ -36,7 +37,7 @@ export class ListComponent implements OnInit {
     this.contentService.getList()
       .subscribe((list) => {
         this.dataSource.data = list;
-        this.loaderService.hideLoader();        
+        this.loaderService.hideLoader();
       });
   }
 }

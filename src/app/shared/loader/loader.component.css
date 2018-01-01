@@ -11,10 +11,10 @@
     opacity: 1;
     z-index: 500000;
 }
-.loader-overlay mat-spinner.mat-spinner {
+mat-spinner {
     position: fixed;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     margin: auto;
     top: 0;
     left: 0;

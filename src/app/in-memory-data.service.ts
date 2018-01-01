@@ -30,51 +30,58 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Son Goku',
         race: 'Sayajin',
         status: 'online',
-        picture: 'http://sm.ign.com/ign_br/screenshot/default/goku_an6e.jpg',
-        cardPicture: 'https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/8/84/Deadly_Awakening_Super_Saiyan_Goku.png/revision/latest?cb=20160829123519',
+        picture: 'https://goo.gl/t6d9qG',
+        cardPicture: 'http://lorempixel.com/250/330/sports/',
       },
       {
         id: 2,
         name: 'Vegeta',
         race: 'Sayajin',
         status: 'online',
-        picture: 'http://static.tvtropes.org/pmwiki/pub/images/vegetavwx2014_928.jpg',
-        cardPicture: 'https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/7/7c/IMG_20170410_080542.jpg/revision/latest?cb=20170410050640',
+        picture: 'https://goo.gl/24iTj6',
+        cardPicture: 'http://lorempixel.com/250/330/transport/',
       },
       {
         id: 3,
         name: 'Son Gohan',
         race: 'Sayajin',
         status: 'busy',
-        picture: 'https://vignette.wikia.nocookie.net/dragonball/images/7/72/GohanIBC01.png/revision/latest/scale-to-width-down/180?cb=20100711183237',
-        cardPicture: 'https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/0/06/Card_1001390_bg.png/revision/latest?cb=20160831124214',
+        picture: 'https://goo.gl/E88N6p',
+        cardPicture: 'http://lorempixel.com/250/330/nightlife/',
       },
       {
         id: 4,
         name: 'Piccolo',
         race: 'Namekuseijin',
         status: 'idle',
-        picture: 'https://myanimelist.cdn-dena.com/images/characters/8/45628.jpg',
-        cardPicture: 'https://vignette4.wikia.nocookie.net/dbz-dokkanbattle/images/c/c6/Brainstormed_Combat_Tactics_Piccolo.png/revision/latest?cb=20161124223205',
+        picture: 'https://goo.gl/U5wdHb',
+        cardPicture: 'http://lorempixel.com/250/330/food/',
       },
       {
-        id: 5,        
+        id: 5,
         name: 'Kuririn',
         race: 'Terráqueo',
         status: 'offline',
-        picture: 'https://pm1.narvii.com/6147/f14acb6149ed3a72ff16d2b8260ad24b107d893c_hq.jpg',
-        cardPicture: 'https://myanimelist.cdn-dena.com/images/characters/16/316662.jpg',
+        picture: 'https://goo.gl/aevBNQ',
+        cardPicture: 'http://lorempixel.com/250/330/animals/',
       },
       {
-        id: 6,        
+        id: 6,
         name: 'Bulma',
         race: 'Terráqueo',
         status: 'offline',
-        picture: 'https://upload.wikimedia.org/wikipedia/en/7/71/Bulma_Lithograph.PNG',
-        cardPicture: 'https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/7/7c/IMG_20170410_080542.jpg/revision/latest?cb=20170410050640',
+        picture: 'https://goo.gl/GmHPFi',
+        cardPicture: 'http://lorempixel.com/250/330/abstract/',
       },
     ];
+    const messages = [
+      { id: 1, notification: 'New contact via Facebook', date: '30 min ago' },
+      { id: 2, notification: 'New contact via Google', date: '1 hours ago' },
+      { id: 3, notification: 'System update!', date: '1 hour and 45 min ago' },
+      { id: 4, notification: 'Bug report', date: '6 hours ago' },
+      { id: 5, notification: 'Disc space warning!', date: '6 hours ago' },
+    ];
 
-    return {itens, users};
+    return { itens, users, messages };
   }
 }

@@ -4,19 +4,23 @@
     <!-- <h3>Timeline</h3> -->
     <form>
       <mat-form-field >
-        <textarea matInput placeholder="Status"></textarea>
+        <textarea 
+        matInput 
+        placeholder="Status"
+        (keyUp.enter)="addNewPost(postMessage)"
+        #postMessage></textarea>
         <mat-hint align="start">
           <span>Say something to your Friends.</span>
         </mat-hint>
       </mat-form-field>
     </form>
-    <mat-card class="card" *ngFor='let user of users'>
+    <mat-card class="card" *ngFor='let post of posts'>
 
       <mat-card-header class="card-header">
-        <mat-card-title>Simple Card</mat-card-title>
+        <mat-card-title>{{ post }}</mat-card-title>
         <mat-card-subtitle>5 minutes ago</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="http://ovicio.com.br/wp-content/uploads/Dragon-Ball-Fighters-PS4-Xbox-One-PC.jpg" />
+      <img mat-card-image src="http://lorempixel.com/680/400/nature/" />
       <mat-card-content>
         These elements primary serve as pre-styled content containers without any additional APIs.
       </mat-card-content>
@@ -35,6 +39,33 @@
         </button>
       </mat-card-actions>
 
+    </mat-card>
+
+    <mat-card class="card">
+    
+      <mat-card-header class="card-header">
+        <mat-card-title>Simple Card</mat-card-title>
+        <mat-card-subtitle>5 minutes ago</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="http://lorempixel.com/680/400/nature/" />
+      <mat-card-content>
+        These elements primary serve as pre-styled content containers without any additional APIs.
+      </mat-card-content>
+      <mat-card-actions class="card-actins">
+        <span>{{ likeNumber }}</span>
+        <button type="button" mat-icon-button (click)="addLike()">
+          <mat-icon>face</mat-icon>
+        </button>
+        <span>{{ favoriteNumber }}</span>
+        <button type="button" mat-icon-button (click)="addFavorite()">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <span>{{ shareNumber }}</span>
+        <button type="button" mat-icon-button (click)="share()">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-card-actions>
+    
     </mat-card>
   </div>
 

@@ -11,14 +11,18 @@ import { User } from '@app/shared/user';
 })
 export class DashboardComponent implements OnInit {
   @Input() users: User[];
+  @Input() profile: User;
+  @Input() posts: any[] = [];
 
   constructor(
     private loaderService: LoaderService,
     private usersService: UsersService
-  ) { }
+  ) {
+    this.loaderService.showLoader();
+  }
 
   ngOnInit() {
-    this.loaderService.showLoader();
+    this.getUser();
     this.getUsers();
   }
 
@@ -27,6 +31,17 @@ export class DashboardComponent implements OnInit {
     this.usersService.getUsers()
       .subscribe((users) => {
         this.users = users;
+        this.loaderService.hideLoader();
+      });
+  }
+
+  /** Return user from service */
+  getUser(): void {
+    // const id = +this.route.snapshot.paramMap.get('id');
+    const id = 1;
+    this.usersService.getUser(id)
+      .subscribe((profile) => {
+        this.profile = profile;
         this.loaderService.hideLoader();
       });
   }

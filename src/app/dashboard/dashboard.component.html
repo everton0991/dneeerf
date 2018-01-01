@@ -1,9 +1,9 @@
-<app-profile></app-profile>
+<app-profile [profile]="profile"></app-profile>
 
 <mat-tab-group color="primary">
   <mat-tab label="Timeline">
     <div class="container-tab">
-      <app-timeline></app-timeline>
+      <app-timeline [users]="users"></app-timeline>
     </div>
   </mat-tab>
   <mat-tab label="All People">

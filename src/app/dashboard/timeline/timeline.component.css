@@ -8,7 +8,7 @@ section div {
     justify-content: space-between;
 }
 .timeline {
-    min-width: 55%;
+    width: 55%;
     flex: 1 1 55%;
     padding:0 0 10px 0;
 }
@@ -33,6 +33,7 @@ section div {
     /* margin-right: 5px; */
 }
 .friends {
+    background: #fff;
     margin-left: 15px;
     min-width: 35%;
     height: 100%;

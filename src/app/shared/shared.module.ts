@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { 
-  MatSidenavModule, 
-  MatIconModule, 
-  MatButtonModule, 
+import {
+  MatSidenavModule,
+  MatIconModule,
+  MatButtonModule,
   MatCardModule,
-  MatInputModule 
+  MatInputModule
 } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';

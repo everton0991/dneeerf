@@ -7,4 +7,4 @@ export class User {
     status: string;
     picture: string;
     cardPicture: string;
-  }
+}

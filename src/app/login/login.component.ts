@@ -10,7 +10,8 @@ import { User } from '@app/shared/user';
 })
 export class LoginComponent implements OnInit {
 
-  private user: User = new User();
+  user: User = new User();
+  url: String =  'http://www.dragonballz.com/';
 
   constructor(private authservice: AuthService) { }
 
