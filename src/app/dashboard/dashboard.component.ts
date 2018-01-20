@@ -15,10 +15,10 @@ export class DashboardComponent implements OnInit {
   @Input() posts: any[] = [];
 
   constructor(
-    private loaderService: LoaderService,
-    private usersService: UsersService
+    private _loaderService: LoaderService,
+    private _usersService: UsersService
   ) {
-    this.loaderService.showLoader();
+    this._loaderService.showLoader();
   }
 
   ngOnInit() {
@@ -28,10 +28,10 @@ export class DashboardComponent implements OnInit {
 
   /** Return users from service */
   getUsers(): void {
-    this.usersService.getUsers()
+    this._usersService.getUsers()
       .subscribe((users) => {
         this.users = users;
-        this.loaderService.hideLoader();
+        this._loaderService.hideLoader();
       });
   }
 
@@ -39,10 +39,10 @@ export class DashboardComponent implements OnInit {
   getUser(): void {
     // const id = +this.route.snapshot.paramMap.get('id');
     const id = 1;
-    this.usersService.getUser(id)
+    this._usersService.getUser(id)
       .subscribe((profile) => {
         this.profile = profile;
-        this.loaderService.hideLoader();
+        this._loaderService.hideLoader();
       });
   }
 }

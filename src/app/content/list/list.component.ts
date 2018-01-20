@@ -18,10 +18,10 @@ export class ListComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
-    private contentService: ContentService,
-    private loaderService: LoaderService
+    private _contentService: ContentService,
+    private _loaderService: LoaderService
   ) {
-    this.loaderService.showLoader();
+    this._loaderService.showLoader();
   }
 
   ngOnInit() {
@@ -34,10 +34,10 @@ export class ListComponent implements OnInit, AfterViewInit {
   }
 
   getList(): void {
-    this.contentService.getList()
+    this._contentService.getList()
       .subscribe((list) => {
         this.dataSource.data = list;
-        this.loaderService.hideLoader();
+        this._loaderService.hideLoader();
       });
   }
 }

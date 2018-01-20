@@ -12,6 +12,7 @@ import { MessagesService } from '@app/shared/messages.service';
 import { ContactsComponent } from '@app/contacts/contacts.component';
 import { throwIfAlreadyLoaded } from '@app/core/module-import.guard';
 import { AuthGuard } from '@app/guards/auth-guard';
+import { UtilService } from '@app/shared/util.service';
 
 @NgModule({
   exports: [
@@ -29,7 +30,8 @@ import { AuthGuard } from '@app/guards/auth-guard';
     ContentService,
     MenuService,
     LoaderService,
-    MessagesService
+    MessagesService,
+    UtilService
   ]
 })
 export class CoreModule {

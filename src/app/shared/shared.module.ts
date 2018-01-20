@@ -28,8 +28,8 @@ import { LoaderModule } from '@app/shared/loader/loader.module';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    RouterModule
-  ],
-  providers: []
+    RouterModule  ],
+  providers: [],
+  declarations: []
 })
 export class SharedModule { }

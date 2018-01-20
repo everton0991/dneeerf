@@ -12,18 +12,18 @@ const httpOptions = {
 
 @Injectable()
 export class UsersService {
-  private usersUrl = 'api/users'; /** url for content */
+  private _url = 'api/users'; /** url for content */
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
   /** Get Users from server */
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.usersUrl);
+    return this._http.get<User[]>(this._url);
   }
 
   /** Get User by id */
   getUser(id: number): Observable<User> {
-    const url = `${this.usersUrl}/${id}`;
-    return this.http.get<User>(url).pipe();
+    const url = `${this._url}/${id}`;
+    return this._http.get<User>(url);
   }
 }

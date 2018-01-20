@@ -36,17 +36,19 @@
       <!-- Color Column -->
       <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef> &nbsp; </mat-header-cell>
-        <mat-cell *matCellDef="let row"> 
+        <mat-cell *matCellDef="let element"> 
             <div class="actions">
-                <button mat-icon-button>
+                <a
+                [routerLink]="['/content', element.position]" 
+                mat-icon-button>
                     <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button>
+                </a>
+                <a mat-icon-button>
                     <mat-icon>delete</mat-icon>
-                </button>
-                <button mat-icon-button>
+                </a>
+                <a mat-icon-button>
                     <mat-icon>more_vert</mat-icon>
-                </button>
+                </a>
             </div>
         </mat-cell>
       </ng-container>
@@ -57,8 +59,12 @@
 
   </div>
 
-  <button mat-fab color="warn" class="add">
+  <a 
+  mat-fab 
+  color="warn"
+  routerLink="/content/new" 
+  class="add">
       <mat-icon>add</mat-icon>
-  </button>
+  </a>
 
 </section>

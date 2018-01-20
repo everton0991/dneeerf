@@ -6,16 +6,16 @@ import { LoaderState } from '@app/shared/loader/loader';
 @Injectable()
 export class LoaderService {
 
-  private loaderSubject = new Subject<LoaderState>();
-  loaderState = this.loaderSubject.asObservable();
+  private _loaderSubject = new Subject<LoaderState>();
+  loaderState = this._loaderSubject.asObservable();
 
   constructor() { }
 
   public showLoader(): void {
-    this.loaderSubject.next(<LoaderState>{show: true});
+    this._loaderSubject.next(<LoaderState>{show: true});
   }
 
   public hideLoader(): void {
-    this.loaderSubject.next(<LoaderState>{show: false});
+    this._loaderSubject.next(<LoaderState>{show: false});
   }
 }

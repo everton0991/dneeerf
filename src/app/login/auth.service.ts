@@ -7,24 +7,24 @@ import { EventEmitter } from '@angular/core';
 @Injectable()
 export class AuthService {
 
-  private userAuthenticated: Boolean = false;
+  private _userAuthenticated: Boolean = false;
 
   userLoggedEmitter = new EventEmitter<boolean>();
 
-  constructor(private router: Router) { }
+  constructor(private _router: Router) { }
 
   login(user: User) {
     if (user.username === 'everton.renan.pc@gmail.com' &&
       user.password === 'q1w2e3') {
-        this.userAuthenticated = true;
+        this._userAuthenticated = true;
         this.userLoggedEmitter.emit(true);
-        this.router.navigate(['/dashboard']);
+        this._router.navigate(['/dashboard']);
     } else {
       this.userLoggedEmitter.emit(false);
     }
   }
 
   userIsAuthenticated() {
-    return this.userAuthenticated;
+    return this._userAuthenticated;
   }
 }

@@ -13,13 +13,12 @@ export class LoginComponent implements OnInit {
   user: User = new User();
   url: String =  'http://www.dragonballz.com/';
 
-  constructor(private authservice: AuthService) { }
+  constructor(private _authservice: AuthService) { }
 
   ngOnInit() {
   }
 
   login() {
-    // console.log(this.user)
-    this.authservice.login(this.user);
+    this._authservice.login(this.user);
   }
 }

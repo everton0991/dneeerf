@@ -12,12 +12,12 @@ const httpOptions = {
 
 @Injectable()
 export class MessagesService {
-  private url = 'api/messages'; /** url for content */
+  private _url = 'api/messages'; /** url for content */
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
   /** Get Messages from server */
     getMessages(): Observable<Message[]> {
-        return this.http.get<Message[]>(this.url);
+        return this._http.get<Message[]>(this._url);
   }
 }

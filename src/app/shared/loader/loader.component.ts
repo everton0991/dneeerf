@@ -12,18 +12,18 @@ import { LoaderState } from '@app/shared/loader/loader';
 export class LoaderComponent implements OnInit, OnDestroy {
 
   show: Boolean = false;
-  private subscription: Subscription;
+  private _subscription: Subscription;
 
-  constructor(private loaderService: LoaderService) { }
+  constructor(private _loaderService: LoaderService) { }
 
   ngOnInit() {
-    this.subscription = this.loaderService.loaderState
+    this._subscription = this._loaderService.loaderState
       .subscribe((state: LoaderState) => {
         this.show = state.show;
       });
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this._subscription.unsubscribe();
   }
 }

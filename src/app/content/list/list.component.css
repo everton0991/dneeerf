@@ -12,9 +12,9 @@
     left: auto;
     position: fixed;
 }
-mat-row .actions button mat-icon {
+mat-row .actions a mat-icon {
     color: #ccc;
 }
-mat-row:hover .actions button mat-icon {
+mat-row:hover .actions a mat-icon {
     color: #635f5f;
 }

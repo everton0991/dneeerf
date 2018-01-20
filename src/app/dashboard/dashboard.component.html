@@ -3,7 +3,9 @@
 <mat-tab-group color="primary">
   <mat-tab label="Timeline">
     <div class="container-tab">
-      <app-timeline [users]="users"></app-timeline>
+      <app-timeline [users]="users">
+        <div class="status-label">Say something to your Friends.</div>
+      </app-timeline>
     </div>
   </mat-tab>
   <mat-tab label="All People">

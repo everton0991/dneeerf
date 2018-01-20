@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '@app/login/auth.service';
 
+import { AuthService } from '@app/login/auth.service';
 import { UsersService } from '@app/shared/users.service';
 import { User } from '@app/shared/user';
 import { MessagesService } from '@app/shared/messages.service';
@@ -18,13 +18,13 @@ export class ToolbarComponent implements OnInit {
   title: String = 'Teste';
   appname: String = 'My App';
   user: User;
-  messages: Message[];  
+  messages: Message[];
 
   constructor(
-    private router: Router,
-    private authService: AuthService,
-    private usersService: UsersService,
-    private messageService: MessagesService
+    private _router: Router,
+    private _authService: AuthService,
+    private _usersService: UsersService,
+    private _messageService: MessagesService
   ) { }
 
   ngOnInit() {
@@ -41,7 +41,7 @@ export class ToolbarComponent implements OnInit {
   getUser(): void {
     // const id = +this.route.snapshot.paramMap.get('id');
     const id = 1;
-    this.usersService.getUser(id)
+    this._usersService.getUser(id)
       .subscribe((user) => {
         this.user = user;
       });
@@ -49,7 +49,7 @@ export class ToolbarComponent implements OnInit {
 
   /** Return messages for user */
   getMessages(): void {
-    this.messageService.getMessages()
+    this._messageService.getMessages()
       .subscribe((messages) => {
         this.messages = messages;
       });
@@ -57,7 +57,7 @@ export class ToolbarComponent implements OnInit {
 
   /** Log user out */
   logout() {
-    this.authService.userLoggedEmitter.emit(false);
-    this.router.navigate(['/']);
+    this._authService.userLoggedEmitter.emit(false);
+    this._router.navigate(['/']);
   }
 }

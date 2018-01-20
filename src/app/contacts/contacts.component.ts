@@ -8,12 +8,12 @@ import { LoaderService } from '@app/shared/loader/loader.service';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor(private loaderService: LoaderService) {
-    this.loaderService.showLoader();
+  constructor(private _loaderService: LoaderService) {
+    this._loaderService.showLoader();
   }
 
   ngOnInit() {
-    this.loaderService.hideLoader();
+    this._loaderService.hideLoader();
   }
 
 }

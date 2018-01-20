@@ -10,11 +10,10 @@ import { Observable } from 'rxjs/Observable';
 })
 export class SidebarComponent implements OnInit {
 
-  mainMenu = this.menuService.getMenu();
+  mainMenu = this._menuService.getMenu();
 
-  constructor(private menuService: MenuService) { }
+  constructor(private _menuService: MenuService) { }
 
   ngOnInit() {
   }
-
 }

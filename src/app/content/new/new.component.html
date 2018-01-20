@@ -1,0 +1,31 @@
+<div class="add-new-container">
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="Input">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Textarea"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="actions">
+    <button 
+    mat-raised-button
+    (click)="goBack()">
+      Go Back
+    </button>
+    <button
+    color="primary" 
+    mat-raised-button
+    (click)="createContent()">
+      Create
+    </button>
+  </div>
+</div>

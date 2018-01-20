@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material';
 
-import { UsersService } from '@app/shared/users.service';
 import { User } from '@app/shared/user';
 
 @Component({
@@ -16,8 +15,9 @@ export class TimelineComponent implements OnInit {
   likeNumber: number = Math.floor((Math.random() * 100) + 1);
   favoriteNumber: number = Math.floor((Math.random() * 100) + 1);
   shareNumber: number = Math.floor((Math.random() * 100) + 1);
+  postDate: Date = new Date();
 
-  constructor(private usersService: UsersService) { }
+  constructor() { }
 
   ngOnInit() {
   }
