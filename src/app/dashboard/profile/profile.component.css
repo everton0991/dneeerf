@@ -3,7 +3,7 @@
     display: block;
 }
 header {
-    background: url('http://juliaebert.com/jekyll-polymer/images/material-bg-10.png') center center;   
+    background: linear-gradient(to left, #A5046C, #08B7C6);   
     display: flex;
     padding: 20px;
     color:#fff;
