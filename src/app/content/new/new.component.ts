@@ -10,16 +10,13 @@ import { UtilService } from '@app/shared/util.service';
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.css']
 })
-export class NewComponent implements OnInit {
+export class NewComponent {
 
   constructor(
     private _contentService: ContentService,
     private _router: Router,
     private _util: UtilService
   ) { }
-
-  ngOnInit() {
-  }
 
   goBack() {
     this._util.backToLastPage();

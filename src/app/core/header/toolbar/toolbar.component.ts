@@ -57,6 +57,7 @@ export class ToolbarComponent implements OnInit {
 
   /** Log user out */
   logout() {
+    localStorage.clear();
     this._authService.userLoggedEmitter.emit(false);
     this._router.navigate(['/']);
   }

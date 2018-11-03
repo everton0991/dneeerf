@@ -15,5 +15,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.authService.userLoggedEmitter
       .subscribe(userLogged => this.userLogged = userLogged);
+
+    if (localStorage.getItem('user')) {
+      this.userLogged = true;
+    }
   }
 }

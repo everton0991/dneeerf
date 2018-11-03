@@ -14,8 +14,9 @@ export class AuthService {
   constructor(private _router: Router) { }
 
   login(user: User) {
-    if (user.username === 'everton.renan.pc@gmail.com' &&
-      user.password === 'q1w2e3') {
+    if (user.username === 'everton.renan.pc@gmail.com' 
+      && user.password === 'q1w2e3') {
+        localStorage.setItem('user', JSON.stringify(user));
         this._userAuthenticated = true;
         this.userLoggedEmitter.emit(true);
         this._router.navigate(['/dashboard']);
@@ -25,6 +26,6 @@ export class AuthService {
   }
 
   userIsAuthenticated() {
-    return this._userAuthenticated;
+    return this._userAuthenticated || localStorage.getItem('user');
   }
 }
